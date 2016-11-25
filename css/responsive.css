@@ -5,12 +5,12 @@
    
    .siteBrand {max-width: 270px;}
    .headerRight nav ul li { padding: 8px 4px;}
+   section{overflow:hidden;}
 }
 
 
 @media only screen and (max-width: 980px) {
-	.container {max-width:100%;}
-	
+	.container {max-width:100%;}	
 	.siteBrand {max-width: 200px;} 
 	.headerRight nav ul li a {font-size: 12px; padding: 4px;}
    
