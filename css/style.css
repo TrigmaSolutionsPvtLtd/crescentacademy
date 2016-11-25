@@ -1,0 +1,127 @@
+* {margin:0; padding:0; outline:none; list-style:none; box-sizing:border-box; text-decoration:none;}
+header, section, aside, article, footer {display:block;}
+img {max-width:100%; border:0;}
+a:hover{opacity:0.9;}
+h1, h2, h3, h4, h5 {font-weight:normal;}
+body {color:#555555; font-size:15px; font-family: 'LatoWebLight';}
+
+.container {margin:0 auto; max-width:1100px; padding:0px 15px;}
+.container-fluid {margin:0 auto; max-width:1540px; padding:0px 15px;}
+.siteHeader {box-shadow: 5px 0 3px 3px rgba(0, 0, 0, 0.36); float: left; position: relative; width: 100%; z-index: 99;}
+.headerTop {float:left; width:100%; background:#00416f; border-bottom:4px solid #2bc1dc; height:34px; line-height:30px;}
+.headerTop ul{float:right; width:auto;}
+.headerTop ul li {float:left;}
+.headerTop ul li a {padding:0px 6px; font-family: 'LatoWebHeavy'; color:#fff;}
+.headerTop ul li a span {padding-left:7px; color:#e89a48;}
+.headerTop ul li a i.call-icon { height:20px; width:20px; border-radius:50%; border:1px solid #fff; margin-right:4px; text-align:center; font-size:15px; line-height:20px;}
+.headerTop ul li:first-child a{ border-right:1px solid #668da9; padding-right:10px; margin-right:4px;}
+.headerMain {float:left; width:100%; padding:30px 0;}
+.siteBrand {float:left; max-width:320px;}
+.headerRight, .enrolBtn {float:right;}
+.enrolBtn {width:auto; }
+.enrolBtn a {color:#fff; width:auto; padding:0px 20px; background:#f68606; border-radius:30px; text-align:center; font-size:12px; height:35px; line-height:36px;  text-transform:uppercase; text-shadow:0px 0px 4px rgba(0,0,0,0.4); font-family: 'LatoWebHeavy'; vertical-align:middle; display:inline-block;}
+.enrolBtn a i {display: inline-block; line-height: 10px; vertical-align: middle; margin-left:3px;}
+.headerRight nav, .headerRight nav ul, .headerRight nav li {float:left;}
+.headerRight nav ul li { padding:8px 10px;}
+.headerRight nav ul li + li {border-left:1px solid #dcdcdc;}
+.headerRight nav ul li a {color:#636363; font-family: 'LatoWebMedium'; font-size:13px; padding:5px; text-transform:uppercase; margin:0px 5px; position:relative; transition:all ease 350ms; -moz-transition:all ease 350ms;}
+.headerRight nav ul li a:after {opacity:0; left:-20%; position:absolute;  bottom:-10px; content:''; height:3px; width:100%; background:#2bc1dc; transition:all ease 350ms; -moz-transition:all ease 350ms; transition:all ease 350ms; -moz-transition:all ease 350ms; }
+.headerRight nav ul li.active a:after, .headerRight nav ul li a:hover:after{ left:0; opacity:1; }
+.homePageBg {background:url(../images/banner.png) no-repeat center center; background-size:cover;}
+
+.slideArea {float:left; width:100%; padding:20px 0;}
+.jumboText {float:left; max-width:600px; margin-top:150px;}
+.jumboText h1{float:left; width:100%; font-size:64px; color:#fff; text-shadow:0px 0px 4px rgba(0,0,0,0.4); font-family: 'LatoWebBold'; text-transform:uppercase; line-height:67px;}
+.jumboText h1 span {color:#2bc1dc; clear:both; display:block;}
+.jumboText h3 {float:left; width:100%; color:#fff; font-size:25px; padding:25px 0; margin-top:25px; position:relative; font-family: 'LatoWebMedium';}
+.jumboText h3:after {position:absolute; left:0; top:0; background:#fff; height:3px; width:70px; content:'';}
+.jumboText .enrolBtn {float: left; height:auto; width:auto;}
+.jumboText .enrolBtn a { display:inline-block; height: 62px; line-height: 65px; width: 220px; font-size:21px; font-family: 'LatoWebBold';}
+.featuresMain {float:left; width:100%; margin-top:115px; border:4px solid rgba(255,255,255,0.6); background:#136dad; display:table;}
+.featuresMain .featureBlock {float:none; display:table-cell; width:25%; text-align:left; background:#136dad; padding:27px; vertical-align:top;}
+.featuresMain .featureBlock:nth-of-type(2){background:#0d65a3;}
+.featuresMain .featureBlock:nth-of-type(3){background:#095c97;}
+.featuresMain .featureBlock:nth-of-type(4){background:#00385f;}
+.featuresMain .featureBlock h3{text-transform:uppercase; color:#fff; font-size:20px; font-family: 'LatoWebBold'; padding:15px 0; font-weight: normal; text-shadow:0px 0px 4px rgba(0,0,0,0.4);}
+.featuresMain .featureBlock p{ color:#fff; font-size:13px;  padding-top:20px; position:relative;}
+span.line-break {float:left; width:100%; width:46px; background:#fff; height:2px; clear:both;}
+.featureBlock.searchBlock {text-align:center;}
+.featuresMain .featureBlock.searchBlock h3{padding-top:0px;}
+.featureBlock.searchBlock form {float:left; width:100%;}
+.featureBlock.searchBlock form input, .featureBlock.searchBlock form select{float:left; width:100%; height:40px; border:1px solid #fff; border-radius:0; line-height:40px; background:transparent; padding:0px 10px; margin-top:6px; color:#fff; font-size:13px; font-family: 'LatoWebBold';}
+.featureBlock.searchBlock form button {height:40px; line-height:40px; color:#fff;float:left; width:100%; background:#f68606; font-size:16px; text-transform:uppercase; font-family: 'LatoWebHeavy'; border:0; margin-top:15px;}
+.featureBlock.searchBlock form button i {margin-left:4px; font-size:14px; vertical-align:middle;  display: inline-block;margin-top: -5px;}
+.offerCourses {float:left; width:100%; padding:50px 0; }
+.sectionTitle {float:left; width:100%; text-align:center; position:relative; padding-bottom:5px; }
+.sectionTitle:after {position:absolute; left:50%; content:''; bottom:0px; width:67px; height:3px; background:#2bc1dc; margin-left:-33.5px;}
+.sectionTitle  h1 {font-size:50px; font-family: 'LatoWebMedium'; color:#003551; font-weight:normal; }
+.sectionTitle  h3 {font-size:20px; font-family: 'LatoWebMedium'; color:#868686; font-weight:normal;  font-style:italic; padding:15px 0;}
+.offers {float:left; width:100%; padding:10px 0; text-align:center;}
+.offerBlock {float:left; width:25%; text-align:center; padding:40px 15px;}
+.offerBlock h2 {font-size:22px; color:#333333; font-family: 'LatoWebBold'; padding:10px 0; position:relative;}
+.offerBlock h2:after {position:absolute; left:50%; width:40px; background:#1ca9a2; height:2px; content:''; margin-left:-20px; bottom:0px;}
+.offerBlock p {font-size:16px; color:#555555; font-family: 'LatoWebMedium'; padding:6px 0;}
+.offers .enrolBtn {float:none; display:inline-block; margin-top:20px;}
+.offers .enrolBtn a {font-size:16px; height:45px; line-height:48px;}
+.whyUs {float:left; width:100%; padding:50px 0; background:#00416f;}
+.whyUs .sectionTitle h1, .whyUs .sectionTitle h3 {color:#fff;}
+.chooseBlock {float:left; width:50%;  margin:60px 0;}
+.chooseBlock + .chooseBlock  {padding-left:35px;}
+.chooseBlock .imgBlock {border:7px solid #fff; float:left; width:100%;overflow:hidden;  position:relative;}
+.chooseBlock .imgBlock img {float:left; width:100%;}
+.chooseBlock h3 {float:left; width:100%; color:#2bc1dc; font-size:24px; font-family: 'LatoWebBold';}
+.chooseBlock h2 {float:left; width:100%; color:#fff; font-size:33px; font-family: 'LatoWebBold';}
+.chooseBlock p {float:left; width:100%; color:#fff; font-size:15px; line-height:29px; margin-top:15px;}
+ 
+.chooseBlock .imgBlock p {float:left; width:100%; }
+.infoCount {float:left; width:100%;  padding:20px 0; text-align:center;}
+.infoCount .countblock {display:inline-block; max-width:40%; width:100%; vertical-align:middle; text-align:center;}
+.infoCount .countblock h1{font-size:64px; color:#2bc1dc; font-family: 'LatoWebHeavy'; line-height:60px; margin-top:15px;}
+.infoCount .countblock span{font-size:15px; color:#fff;}
+.gallerySlider {float:left; width:100%; margin-top:45px; position:relative; padding:0px 90px;}
+.gallerySlider .owl-buttons {position:absolute; left:0; top:50%; margin-top:-35px; width:100%;}
+.gallerySlider .owl-buttons .owl-prev, .gallerySlider .owl-buttons .owl-next {float:left; width:70px; height:70px; margin-left:-90px; font-size:0; background-size:contain;}
+.gallerySlider .owl-buttons .owl-next {margin-left:0; margin-right:-90px; background:url(../images/next.png) no-repeat center center; float:right;}
+.gallerySlider .owl-buttons .owl-prev { background:url(../images/prev.png) no-repeat center center;}
+.ourInstructors {float:left; width:100%; padding:50px 0; background:#00416f;} 
+.Instructors {float:left; width:100%; text-align:center;}
+.InstructorsBlock { float:left; max-width:31.333%; width:100%; margin:14px 1%; background:rgba(255,255,255,0.14); text-align:center; border:1px solid rgba(255,255,255,0.4); padding:15px;}
+.imgblock {display:inline-block; width:200px; height:200px; border-radius:50%; margin-top:5px; border:1px solid #b3e8ff; overflow:hidden;}
+.imgblock img {float:left; width:100%;}
+.InstructorsBlock h2 { font-size:15px; color:#fff; font-family: 'LatoWebHeavy'; padding:10px 0 5px 0;}
+.InstructorsBlock h3 { font-size:15px; color:#fff; font-family: 'LatoWeb'; padding:0;}
+.InstructorsBlock p { font-size:15px; color:#fff; padding:15px 0 0 0; line-height:28px;}
+.InstructorsBlock ul {display:inline-block; margin-top:20px; float:none;}
+.InstructorsBlock ul li {float:left; margin:3px 10px;}
+.InstructorsBlock ul li a{color:#fff;}
+.newsletterSection {float:left; width:100%; background:#1e9dd0; padding:30px 0;}
+.newsletterInfo {float:left; position:relative; padding-left:80px; max-width:55%;}
+.newsletterInfo span{position:absolute; left:0; top:0; width:80px; top:5px;}
+.newsletterInfo h2{font-size:22px; color:#e1e1e1; padding:3px 0; font-family: 'LatoWebHeavy'; margin-top:7px;}
+.newsletterInfo p{font-size:17px; color:#e1e1e1; padding:3px 0; font-family: 'LatoWeb';}
+.newsletterForm {float:right; width:40%; margin-top:13px;}
+.newsletterForm .inputField {float:left; width:100%; position:relative;}
+.newsletterForm .inputField form {float:left; width:100%;}
+.newsletterForm .inputField form input[type="text"], .newsletterForm .inputField form input[type="email"] { float:left; width:100%; height:45px; background:#fff; padding:0px 100px 0px 10px; color:#1d1d1d; font-size:17px; border:0; border-radius:2px;}
+.newsletterForm .inputField form input[type="submit"] {position:absolute; right:0; height:45px; top:0; text-align:center; border:0; border-radius:0px 2px 2px 0; background:#f37800; border-bottom:1px solid #cc6f05; font-size:19px; font-family: 'LatoWebBold';  text-shadow:0px 0px 4px rgba(0,0,0,0.4); width:96px; color:#fff; cursor:pointer;} 
+.newsletterForm .inputField form input[type="submit"]:hover {background:#cc6f05;}
+.siteFooter {float:left; width:100%; border-top:1px solid #167daa; background:#002540; padding:50px 0 0 0;}
+.footerBlock {float:left; width:auto;}
+.footerBlock h1 {position:relative; padding:14px 0; float:left; width:100%; font-size:20px; color:#fff; font-family: 'LatoWebBold'; text-transform:capitalize;}
+.footerBlock h1:after {position:absolute; left:0; bottom:0; height:2px; width:60px; content:''; background:#2bc1dc;}
+.small-w {width:17%;}
+.medium-w {width:26%;}
+.larg-w {width:40%;}
+.footerBlock ul, .footerBlock ul li {float:left; width:100%;}
+.footerBlock ul li a {margin:14px 0; color:#fff; font-size:14px; margin:0; margin-top:30px; font-family: 'LatoWeb'; float:left;}
+.footerBlock ul li p {position:relative; padding-left:35px; color:#fff; font-size:14px; font-family: 'LatoWebMedium'; margin-top:25px; line-height:20px; padding-right:15px;}
+.footerBlock ul li p i {position:absolute; left:0; top:1px; width:25px;}
+ul.socialConnect {margin-top:30px;}
+ul.socialConnect li{float:left; width:auto;}
+ul.socialConnect li a {margin:10px 5px; height:40px; width:40px; text-align:center; border:1px solid #fff; border-radius:50%; display:inline-block; line-height:40px;}
+ul.socialConnect li a i {font-size:20px;}
+ul.socialConnect li a:hover {color:#1e9dd0; border-color:#1e9dd0;}
+.locationMap {float:left; width:100%; margin-top:15px; border:7px solid #001a2d;}
+.locationMap iframe {float:left; width:100%; height:255px;}
+.copyrights {float:left; width:100%; padding:20px 0; text-align:center; margin-top:50px; background:#002139;}
+.copyrights p {color:#fff; opacity:0.3; font-size:14px;font-family: 'LatoWeb';}
