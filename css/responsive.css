@@ -1,32 +1,124 @@
 @charset "UTF-8";
-@media only screen and (min-width: 768px) {
-.navbar {
-    border-radius: 0;
+ 
+@media only screen and (max-width: 1220px) {
+   .container {max-width:960px;}
+   
+   .siteBrand {max-width: 270px;}
+   .headerRight nav ul li { padding: 8px 4px;}
 }
 
-}
-@media only screen and (max-width: 1199px) {
+
+@media only screen and (max-width: 980px) {
+	.container {max-width:100%;}
+	
+	.siteBrand {max-width: 200px;} 
+	.headerRight nav ul li a {font-size: 12px; padding: 4px;}
    
 }
 
+@media only screen and (max-width: 840px) {
+	.enrolBtn a {font-size: 11px;line-height: 37px;padding: 0 12px;}
+	.headerRight nav ul li { padding: 5px 0;}
+	.jumboText h1 {font-size: 55px; line-height: 55px;}
+	.jumboText {margin-top: 80px;}
+	.jumboText .enrolBtn a {font-size: 16px;height: 53px;line-height: 56px;width: 190px;}
+	.jumboText h3 {font-size: 20px;}
+	.featuresMain .featureBlock h3 {font-size: 13px; padding: 8px 0;}
+	.sectionTitle h1 { font-size: 40px;}
+	.sectionTitle h3 { padding-top:5px; font-size: 15px;}
+	.offerBlock h2 {font-size: 15px;}
+	.offerBlock p { font-size: 14px;}
+	.offerBlock > img { max-width: 75px;}
+	.chooseBlock h3 { font-size: 20px;}
+	.chooseBlock h2 { font-size: 24px;}
+	.chooseBlock p { font-size: 13px; line-height: 22px;  margin-top: 5px;}
+	.infoCount .countblock h1 {font-size: 50px;line-height: 50px;}
+	.infoCount {  padding: 5px 0;}
+	.imgblock { height: 130px;width: 130px;}
+	.InstructorsBlock p { font-size: 13px; line-height: 20px;}
+	.newsletterInfo h2 {font-size: 16px;}
+	.newsletterInfo p {font-size: 14px;}
+	.newsletterInfo span { height: 56px; margin-top: -28px; top: 50%;}
+	.footerBlock ul li a {font-size: 13px; margin: 20px 0 0;}
+	.larg-w { width: 35%;}
+	.medium-w { width: 30%;}
+	ul.socialConnect li a i {font-size: 15px;}
+	ul.socialConnect li a { height: 35px;line-height: 35px; margin: 3px; width: 35px;}
 
-@media only screen and (max-width: 991px) {
-   
-}
-
-@media only screen and (min-width: 767px) and (max-width: 991px) { 
-   
 }
 
 @media only screen and (max-width: 767px) {
+.headerRight .enrolBtn {display:none;}
+.siteBrand { max-width: 270px;}
+ 
+.headerMain { padding: 10px 0; position:relative;}
+.headerMain .site-nav ul{position:absolute; top:100%; left:0; width:100%; background:rgba(255,255,255,0.95); }
+.headerMain .site-nav ul li {border:0; width:100%; padding:0; }
+.headerMain .site-nav ul li a {padding:10px 20px; font-size:14px; text-transform:uppercase; color:#222; width:100%; margin:0; float:left;}
+.headerMain .site-nav ul li + li a {border-top:1px solid #dbdbdb;}
+.headerMain .site-nav ul li a:after {content:none;}
+.headerMain .site-nav ul li a:hover {color:#00416f;}
+.mobile-only {display:block;}
+.desktop-only {display:none;}
+.planCourse .featuresMain {margin:15px 0;}
+.parallax-window {min-height: 500px;}
+.chooseBlock { margin: 0; width: 100%;}
+.chooseBlock + .chooseBlock {padding-top:15px;  padding-left: 0;}
+.featuresMain .featureBlock {float: left;min-height: 225px; width:50%;}
+.offerBlock { width: 50%;}
+.offerBlock:nth-of-type(3) {clear:left;}
+.gallerySlider .owl-buttons .owl-prev, .gallerySlider .owl-buttons .owl-next { height: 35px; margin-left: -30px;width: 30px;}
+.gallerySlider .owl-buttons .owl-next { margin-right: -30px;}
+.gallerySlider {padding: 0 30px;}
+.small-w{ width: 30%;}
+.medium-w { width: 40%;}
+.larg-w { width: 100%;}
+
+}
+ 
+
+@media only screen and (max-width:639px) { 
+	.offerBlock { width:100%;}
+	.featuresMain .featureBlock { min-height: inherit; text-align: center;width: 100%;}
+	span.line-break { display: inline-block;float: none;}
+	.newsletterInfo {max-width: 100%; width: 100%;}
+	.newsletterForm { float: left; width: 100%;}
+	.small-w { width:100%;}
+	.medium-w { width:100%;}
+	.larg-w { width: 100%;}
+	.sectionTitle h1 { font-size: 30px;}
+	.sectionTitle h3 { font-size: 13px;}
+	.footerBlock + .footerBlock {border-top:1px solid rgba(0,0,0,0.5);}
+	.footerBlock {padding: 20px 0;}
+	section {overflow:hidden;}
+	.footerBlock {padding: 20px 0;}
+	.footerBlock {text-align: center;}
+	.footerBlock ul li a {width: 100%;}
+	.footerBlock h1:after { left: 40%;width: 20%;}
+	.footerBlock ul.socialConnect li a {width:35px;}
+	ul.contactInfo > li { float: none; max-width: 300px; display:inline-block;}
+	.footerBlock ul.socialConnect {text-align: center;}
+	.footerBlock ul.socialConnect li{float:none; display:inline-block;}
+	.jumboText h1 { font-size: 44px;}
+	.headerTop { text-align:center;}
+	.headerTop ul { display: inline-block; float: none; width: auto; }
+	.infoBlock { text-align: center;}
+	.footerBlock ul li p i { display: inline-block; left: auto; padding: 4px; position: relative; top: auto; vertical-align: middle;}
 	
-}
-@media only screen and (max-width: 640px) {
-   
-}
-@media only screen and (max-width: 480px) {
-    
-}
-@media only screen and (max-width: 320px) {
-   
-}
+	
+} 
+
+@media only screen and (max-width:480px) {
+	.InstructorsBlock { margin: 14px 0; max-width: 100%;}
+} 
+
+@media only screen and (max-width:380px) {
+	.headerTop ul li a {font-size: 13px;}
+	.jumboText h1 { font-size: 34px;  line-height: 37px;}
+	.jumboText { margin-top: 40px;}
+	.parallax-window { min-height: 470px;}
+	.jumboText h1 { font-size: 34px; line-height: 40px;}
+	.siteBrand { max-width: 240px;}
+	.headerTop ul li a {font-family: 'LatoWeb'; padding: 0 4px;}
+	.copyrights p { font-size: 12px;}
+} 

@@ -7,7 +7,7 @@ body {color:#555555; font-size:15px; font-family: 'LatoWebLight';}
 
 .container {margin:0 auto; max-width:1100px; padding:0px 15px;}
 .container-fluid {margin:0 auto; max-width:1540px; padding:0px 15px;}
-.siteHeader {box-shadow: 5px 0 3px 3px rgba(0, 0, 0, 0.36); float: left; position: relative; width: 100%; z-index: 99;}
+.siteHeader {box-shadow: 5px 0 3px 3px rgba(0, 0, 0, 0.36); float: left; width: 100%; z-index: 99;  position:relative; left:auto; top:auto;}
 .headerTop {float:left; width:100%; background:#00416f; border-bottom:4px solid #2bc1dc; height:34px; line-height:30px;}
 .headerTop ul{float:right; width:auto;}
 .headerTop ul li {float:left;}
@@ -27,7 +27,8 @@ body {color:#555555; font-size:15px; font-family: 'LatoWebLight';}
 .headerRight nav ul li a {color:#636363; font-family: 'LatoWebMedium'; font-size:13px; padding:5px; text-transform:uppercase; margin:0px 5px; position:relative; transition:all ease 350ms; -moz-transition:all ease 350ms;}
 .headerRight nav ul li a:after {opacity:0; left:-20%; position:absolute;  bottom:-10px; content:''; height:3px; width:100%; background:#2bc1dc; transition:all ease 350ms; -moz-transition:all ease 350ms; transition:all ease 350ms; -moz-transition:all ease 350ms; }
 .headerRight nav ul li.active a:after, .headerRight nav ul li a:hover:after{ left:0; opacity:1; }
-.homePageBg {background:url(../images/banner.png) no-repeat center center; background-size:cover;}
+/* .homePageBg {background:url(../images/banner.png) no-repeat center center; background-size:cover;} */
+.parallax-window { min-height:740px; background: transparent;}
 
 .slideArea {float:left; width:100%; padding:20px 0;}
 .jumboText {float:left; max-width:600px; margin-top:150px;}
@@ -53,7 +54,8 @@ span.line-break {float:left; width:100%; width:46px; background:#fff; height:2px
 .featureBlock.searchBlock form button i {margin-left:4px; font-size:14px; vertical-align:middle;  display: inline-block;margin-top: -5px;}
 .offerCourses {float:left; width:100%; padding:50px 0; }
 .sectionTitle {float:left; width:100%; text-align:center; position:relative; padding-bottom:5px; }
-.sectionTitle:after {position:absolute; left:50%; content:''; bottom:0px; width:67px; height:3px; background:#2bc1dc; margin-left:-33.5px;}
+.sectionTitle:after {position:absolute; left:50%; content:''; bottom:0px; width:67px; height:3px; background:#2bc1dc; margin-left:-33.5px; transition:all ease 450ms; }
+.sectionTitle:hover:after{width:76px; transition:all ease 450ms; margin-left:-38px;}
 .sectionTitle  h1 {font-size:50px; font-family: 'LatoWebMedium'; color:#003551; font-weight:normal; }
 .sectionTitle  h3 {font-size:20px; font-family: 'LatoWebMedium'; color:#868686; font-weight:normal;  font-style:italic; padding:15px 0;}
 .offers {float:left; width:100%; padding:10px 0; text-align:center;}
@@ -65,7 +67,7 @@ span.line-break {float:left; width:100%; width:46px; background:#fff; height:2px
 .offers .enrolBtn a {font-size:16px; height:45px; line-height:48px;}
 .whyUs {float:left; width:100%; padding:50px 0; background:#00416f;}
 .whyUs .sectionTitle h1, .whyUs .sectionTitle h3 {color:#fff;}
-.chooseBlock {float:left; width:50%;  margin:60px 0;}
+.chooseBlock {float:left; width:50%;  margin:0px 0px 60px 0; padding-top:60px;}
 .chooseBlock + .chooseBlock  {padding-left:35px;}
 .chooseBlock .imgBlock {border:7px solid #fff; float:left; width:100%;overflow:hidden;  position:relative;}
 .chooseBlock .imgBlock img {float:left; width:100%;}
@@ -84,7 +86,7 @@ span.line-break {float:left; width:100%; width:46px; background:#fff; height:2px
 .gallerySlider .owl-buttons .owl-next {margin-left:0; margin-right:-90px; background:url(../images/next.png) no-repeat center center; float:right;}
 .gallerySlider .owl-buttons .owl-prev { background:url(../images/prev.png) no-repeat center center;}
 .ourInstructors {float:left; width:100%; padding:50px 0; background:#00416f;} 
-.Instructors {float:left; width:100%; text-align:center;}
+.Instructors {float:left; width:100%; text-align:center; padding-top:50px;}
 .InstructorsBlock { float:left; max-width:31.333%; width:100%; margin:14px 1%; background:rgba(255,255,255,0.14); text-align:center; border:1px solid rgba(255,255,255,0.4); padding:15px;}
 .imgblock {display:inline-block; width:200px; height:200px; border-radius:50%; margin-top:5px; border:1px solid #b3e8ff; overflow:hidden;}
 .imgblock img {float:left; width:100%;}
@@ -125,3 +127,7 @@ ul.socialConnect li a:hover {color:#1e9dd0; border-color:#1e9dd0;}
 .locationMap iframe {float:left; width:100%; height:255px;}
 .copyrights {float:left; width:100%; padding:20px 0; text-align:center; margin-top:50px; background:#002139;}
 .copyrights p {color:#fff; opacity:0.3; font-size:14px;font-family: 'LatoWeb';}
+.planCourse {float:left; width:100%;}
+.mobile-only {display:none;}
+.desktop-only {display:block;}
+
