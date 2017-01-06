@@ -1,3 +1,41 @@
+<?php // Initialize variables to null.
+if(isset($_POST['submit'])) { // Checking null values in message.
+$email = $_POST['email'];
+$to = "email id here";
+$headers  = "From: " . strip_tags($email) . "\r\n";
+$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
+$headers .= "CC: info@crescentacademy.com\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$subject = "Contact Inquiry";
+
+$message = '<html><body>';
+ 
+$message .= '<table width="100%"; rules="all" style="border:1px solid #3A5896;" cellpadding="10">';
+ 
+$message .= "<tr><td><img src='/Crescentacademy/images/favicon_ca_32x32.png' alt='Crescent Academy' /></td></tr>";
+ 
+$message .= "<tr><td colspan=2>CONTACT INFORMATION</td></tr>";
+
+
+$message .= "<tr><td colspan=2 font='colr:#999999;'><B>Name : </B>".$_POST['name']."</td></tr>"; 
+$message .= "<tr><td colspan=2 font='colr:#999999;'><B>Email Id : </B>".$_POST['email']."</td></tr>"; 
+$message .= "<tr><td colspan=2 font='colr:#999999;'><B>Phone : </B>".$_POST['phone']."</td></tr>"; 
+$message .= "<tr><td colspan=2 font='colr:#999999;'><B>Inquiry : </B>".$_POST['inquiry']."</td></tr>"; 
+ 
+  
+$message .= "<tr><td colspan=2 font='colr:#999999;'>crescentacademy.com</td></tr>"; 
+
+$message .= "</table>";
+ 
+$message .= "</body></html>";
+
+if(mail($to,$subject,$message,$headers))
+{
+$successMessage = "Message sent successfully.......";
+}
+}
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -6,9 +44,8 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <meta name="p:domain_verify" content="572fbf33ecd64b28086f255f77bc2c27"/>
 		<link rel="shortcut icon" type="image/png" href="images/favicon_ca_32x32.png">
-        <title>CRESCENT ACADEMY - Orange County's After School Learning Center for Arabic, Islamic Studies &amp; Quran : Home</title>
+        <title>CRESCENT ACADEMY - Orange County's After School Learning Center for Arabic, Islamic Studies &amp; Quran : Contact</title>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
         <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
@@ -61,7 +98,7 @@
 
                         <nav class="site-nav rmm style" >
                             <ul class="menu-left">
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="#">Stages</a>
                                     <ul>
                                         <li><a href="early-childhood.html">Pre-K &amp; K</a></li>
@@ -78,7 +115,7 @@
                                         <li><a href="news.html">News</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Academy</a>
+                                <li class="active"><a href="#">Academy</a>
                                     <ul>
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="careers.html">Careers</a></li>
@@ -93,134 +130,112 @@
 
         </header>
 
-<!-- ================================= Header Image ================================= -->
+<!-- ================================= Banner Section ================================= -->
 
-        <!--    <section class="slideArea homePageBg parallax-window" data-parallax="scroll" data-image-src="images/banner-image.jpg">  -->
-        <section class="slideArea homePageBg">
-
-            <div id="block2" style="width: 100%; height: 878px;"
-			  data-vide-bg="mp4: videos/banner-video, webm: videos/banner-video, ogv: banner-video, poster: videos/banner-video"
-			  data-vide-options="position: 0% 50%">
-			</div>
-
-            <div class="heroText">
-                <div class="container">
-                    <div class="jumboText clearfix">
-                        <h2>INVEST IN YOUR CHILD</h2>
-                        <h1>FOR THIS LIFE AND THE NEXT</h1>
-                        <h3>Crescent Academy is Orange County's after-school learning center for<br><strong>Arabic, Islamic Studies &amp; Quran!</strong></h3>
-						<div class="enrolBtn">
-                            <a href="apply.html">APPLY NOW <i><img src="images/btn-arrow.png" alt=""></i></a>
-                        </div>
-                    </div>
-
-                    <div class="desktop-only featuresMain">
-                        <div class="featureBlock">
-                            <img class="slide-top" src="images/icon-arabic.png" alt="" />
-                            <h3>Arabic</h3>
-                            <span class="line-break"></span>
-                            <p>Only a proficient Arabic reader can begin to understand the meanings of the words of the holy Quran and enjoy its poetic aspect.</p>
-                        </div>
-
-                        <div class="featureBlock">
-                            <img class="slide-top" src="images/icon-islamic.png" alt="" />
-                            <h3>Islamic Studies</h3>
-                            <span class="line-break"></span>
-                            <p>The list includes: creed (<i>'aqeeda</i>), jurisprudence (<i>fiqh</i>), biography of the Prophet, PBUH (<i>sira</i>), exegesis of the Quranic scripture (<i>tafseer</i>), Prophetic Sayings (<i>Hadeeth</i>) and Islamic history.</p>
-                        </div>
-
-                        <div class="featureBlock">
-                            <img class="slide-top" src="images/icon-quran.png" alt="" />
-                            <h3>Quran</h3>
-                            <span class="line-break"></span>
-                            <p>Recitation (<i>tajweed</i>) of the holy Quran is an obligation on every Muslim. Students are expected to memorize more than 10 parts (<i>juz'</i>) of the Quran during their journey from Preschool to Grade 12, God willing.</p>
-                        </div>
-                                              
-                        <div class="featureBlock">
-                            <img class="slide-top" src="images/icon-discount.png" alt="" />
-                            <h3>Discount!</h3>
-                            <span class="line-break"></span>
-                            <p>The first 40 students to register will receive a discount up to 25%!<br><br><strong><a href="tel:9498006777">CALL NOW TO FIND OUT MORE!</strong></a></p>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- hero text ends -->
-        </section>
-
-<!-- ================================= Blocks Over Header Image (MOBILE ONLY) ================================= -->
-
-        <section class="blocksOverHeader mobile-only">
+        <section class="slideArea innerPageBg parallax-window" data-parallax="scroll" data-image-src="images/banner-faqs.jpg">
             <div class="container">
-                <div class="featuresMain">
-
-                    <div class="featureBlock">
-                        <img class="slide-top" src="images/icon-arabic.png" alt="" />
-                        <h3>Arabic</h3>
-                        <span class="line-break"></span>
-                        <p>Only a proficient Arabic reader can begin to understand the meanings of the words of the holy Quran and enjoy its poetic aspect.</p>
-                    </div>
-
-                    <div class="featureBlock">
-                        <img class="slide-top" src="images/icon-islamic.png" alt="" />
-                        <h3>Islamic Studies</h3>
-                        <span class="line-break"></span>
-                        <p>The list includes: creed (<i>'aqeeda</i>), jurisprudence (<i>fiqh</i>), biography of the Prophet, PBUH (<i>sira</i>), exegesis of the Quranic scripture (<i>tafseer</i>), Prophetic Sayings (<i>Hadeeth</i>) and Islamic history.</p>
-                    </div>
-
-                    <div class="featureBlock">
-                        <img class="slide-top" src="images/icon-quran.png" alt="" />
-                        <h3>Quran</h3>
-                        <span class="line-break"></span>
-                        <p>Recitation (<i>tajweed</i>) of the holy Quran is an obligation on every Muslim. Students are expected to memorize more than 10 parts (<i>juz'</i>) of the Quran during their journey from Preschool to Grade 12, God willing.</p>
-                    </div>
-                    
-                    <div class="featureBlock">
-                        <img class="slide-top" src="images/icon-discount.png" alt="" />
-                        <h3>Discount!</h3>
-                        <span class="line-break"></span>
-                        <p>The first 40 students to register will receive a lifetime discount up to 25%!<br><br><strong><a href="tel:9498006777">CALL NOW TO FIND OUT MORE!</strong></a></p>
-                    </div>
+                <div class="jumboText">
+                    <h1>Contact Crescent Academy</h1>
+                    <h3>We want to hear from you!</h3>
                 </div>
             </div>
         </section>
 
-<!-- ================================= Educational Stages ================================= -->
-
-        <section class="educationalStages">
+<!-- ======================================== contact form =================================== -->
+ 
+        <section class="innerPageView">
+		    <div class="message"><?php echo $error; ?></div>
             <div class="container">
-                <div class="offers">
+                <div class="pageContent contactPage">
+                    <div class="contactBlock formBlock">
+                        <h1>Send us a message</h1>
+                <!--		<p>Technology is spreading everywhere, creating hundreds of thousands of high-paying jobs in many fields. </p>  -->
+                        <form method="post" action="/Crescentacademy/contact_mail.php">
+                            <div class="inputField "><input type="text" name="name" placeholder="Name" /><i class="ci-user"></i></div>
+							<span class="error"><?php echo $nameError;?></span>
+                            <div class="inputField"><input type="text" name="email" placeholder="Email" /><i class="ci-email"></i></div>
+							<span class="error"><?php echo $emailError;;?></span>
+                            <div class="inputField"><input type="text" name="phone" placeholder="Phone" /><i class="ci-phone"></i></div>
+							<span class="error"><?php echo $phoneError;?></span>
+                            <div class="inputField"><textarea name="inquiry" placeholder="Inquiry"></textarea></div>
+                            <div class="inputField"><button type="submit" name="submit">Submit<img src="images/btn-arrow-big.png" alt="" /></button></div>
+							<span class="success"><?php echo $successMessage;?></span>
+                        </form>
+                    </div> <!-- block ends -->
 
-                    <div class="offerBlock slide-top">
-                      <a href="early-childhood.html">
-                        <img src="images/icon-ec.png" alt="" />
-                        <h2>Early Childhood</h2>
-                      </a>
-                    </div><!-- block ends -->
+                    <div class="contactBlock contactInfo">
+                     <!--    <div class="iLocation">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1174.2086165547341!2d-117.74785389185973!3d33.65292515948246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce7f82e0babad%3A0xe8f36af065cbbb4d!2s200+Spectrum+Center+Dr%2C+Irvine%2C+CA+92618%2C+USA!5e0!3m2!1sen!2sin!4v1479992148874" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div> -->
+                        <h1>CONTACT INFO</h1>
+                        <ul>
+                            <li>
+                                <a href="tel:9498006777">
+                                    <i><img src="images/icon-phone-blue.png" alt="" /></i>
+                                    <div class="info">
+                                        <p><strong>PHONE</strong></p>
+                                        <p>(949) 800-6777</p>
+                                    </div>
+                                </a>
+                            </li>
 
-                    <div class="offerBlock slide-left">
-                      <a href="elementary.html">
-                        <img src="images/icon-elementary.png" alt="" />
-                        <h2>Elementary</h2>
-                      </a>
-                    </div><!-- block ends -->
+                            <li>
+                                <a href="mailto:info@CrescentAcademy.com?subject=Contact request from website">
+                                    <i><img src="images/icon-mail-blue.png" alt="" /></i>
+                                    <div class="info">
+                                        <p><strong>EMAIL</strong></p><p>info@CrescentAcademy.com</p>
+                                    </div>
+                                </a>
+                            </li>
 
-                    <div class="offerBlock slide-left">
-                      <a href="middle.html">
-                        <img src="images/icon-middle.png" alt="" />
-                        <h2>Middle</h2>
-                      </a>
-                    </div><!-- block ends -->
+                            <li>
+                                <i><img src="images/icon-location-blue.png" alt="" /></i>
+                                <div class="info">
+                                    <p><strong>PHYSICAL ADDRESS</strong></p>
+                                    <p>200 Spectrum Center Drive,<br />Irvine, CA 92618<br />USA</p>
+                                </div>
+                            </li>
 
-                    <div class="offerBlock slide-left">
-                      <a href="high.html">
-                        <img src="images/icon-high.png" alt="" />
-                        <h2>High</h2>
-                      </a>
-                    </div><!-- block ends -->
+                            <li>
+                                <i><img src="images/icon-mailbox-blue.png" alt="" /></i>
+                                <div class="info">
+                                    <p><strong>MAILING ADDRESS</strong></p>
+                                    <p>PO Box 54545,<br />Irvine, CA 92619<br />USA</p>
+                                </div>
+                            </li>
 
-                </div> <!-- offer ends -->
-            </div><!-- container ends -->
-        </section><!-- course ends -->
+                            <li>
+                                <a href="index.html">
+                                    <i><img src="images/icon-globe-blue.png" alt="" /></i>
+                                    <div class="info">
+                                        <p><strong>WEBSITE</strong></p>
+                                        <p>www.CrescentAcademy.com</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="socialLinks">
+                            <li><a href="http://fb.com/crescentacademe" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="http://twitter.com/crescentacademe" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/crescentacademy/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="http://www.pinterest.com/crescentacademy/" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC1WIKtDSVGw-_oYbCN31kCg" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+
+
+                    </div>
+
+                </div><!-- page content -->
+            </div><!-- wrapper ends -->
+        </section> <!-- inner page ends -->
+
+<!-- ================================= Map ================================= -->
+
+           <section class="map-wrapper">
+			<div id="map-canvas"></div>
+		</section>
+	
 
 <!-- ================================= Why CA ================================= -->
 
@@ -271,7 +286,7 @@
 
                 <div class="item">
                     <div class="training-wrapper">
-                        <h1>Convenient &amp; Accessible</h1>
+                        <h1>Convenient Location</h1>
                         <h2>Crescent Academy is conveniently located in the heart of Orange County close to the intersection of I-5 and CA-405 in the city of Irvine.</h2>
                     </div>
                 </div>
@@ -279,7 +294,7 @@
             </div>
         </section><!-- projectTraining ends -->
 
-<!-- ================================= Apply Now ================================= -->
+<!-- ================================= Enroll Now ================================= -->
 
         <section class="enrollnow">
             <div class="container">
@@ -340,16 +355,35 @@
                 <p>Copyright &copy; 2017 <a href="about.html">Crescent Academies LLC.</a> All rights reserved | <a href="Privacy-Policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
             </section>
         </footer>
-
+<style>
+.error{
+	
+	float: left;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+	color:red
+}
+.success{
+	
+	float: left;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+	color:green;
+}
+</style>
 <!--  ================================= jQuery 1.7+ =================================  -->
 
         <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/responsivemultimenu.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		<script src="js/CustomGoogleMapMarker.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/owl.carousel.min.js"></script>
 		<script src="js/jquery.easing.min.js"></script>
 		<script src="js/jquery.fadethis.js"></script>
 		<script src="js/jquery.vide.js"></script>
+        <script src="js/responsivemultimenu.js"></script>
         <script src="js/custom.js"></script>
 		<script>
 			$(document).ready(function() {
@@ -359,7 +393,37 @@
 				});
 			});
 		</script>
+	    <script type="text/javascript">
+			function initialize() {
 
+				var myLatlng = new google.maps.LatLng(33.652738,-117.7480227);
+				var mapOptions = {
+					zoom: 16,
+					center: myLatlng,
+					disableDefaultUI: true
+				}
+				
+				var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+				
+				/*
+				// Example standard marker
+				var marker = new google.maps.Marker({
+					position: myLatlng,
+					map: map,
+					title: 'Hello World!'
+				});
+				*/
+				
+				overlay = new CustomMarker(
+					myLatlng, 
+					map,
+					{
+						marker_id: '123'
+					}
+				);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>  
 
     </body>
 </html>
